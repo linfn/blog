@@ -1,0 +1,2 @@
+# blog
+https://linfn.dev
