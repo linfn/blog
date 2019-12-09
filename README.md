@@ -1,2 +1,3 @@
 # blog
-https://linfn.dev
+
+<https://linfn.dev>
