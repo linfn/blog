@@ -23,6 +23,7 @@ jobs:
       run: |
         hugo --minify
         cp ./LICENSE ./public/LICENSE
+        rm ./public/android-chrome-384x384.png
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
