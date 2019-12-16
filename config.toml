@@ -3,25 +3,33 @@ languageCode = "zh-cn" # http://www.rssboard.org/rss-language-codes
 title = "linfn's Blog"
 theme = "hermit"
 
+rssLimit = 10
+# This message is only used by the RSS template.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License."
+
+hasCJKLanguage = true
+enableEmoji = true
+
+# syntax highlighting
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
-hasCJKLanguage = true
-rssLimit = 10
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License." # This message is only used by the RSS template.
-enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
+
 googleAnalytics = "UA-154217073-1"
 
 [author]
   name = "linfn"
 
-[blackfriday]
-  # hrefTargetBlank = true
-  # noreferrerLinks = true
-  # nofollowLinks = true
+# Hugo 0.60 开始使用 goldmark 作为默认 Markdown 引擎, 
+# 这里仍使用 Blackfriday 是因为需要 hrefTargetBlank 特性
+[markup]
+  defaultMarkdownHandler = "Blackfriday"
+  [markup.blackfriday]
+    hrefTargetBlank = true
+    # noreferrerLinks = true
+    # nofollowLinks = true
 
 [taxonomies]
   tag = "tags"
-  # Categories are disabled by default.
 
 [params]
   dateform        = "Jan 2, 2006"
@@ -66,5 +74,5 @@ googleAnalytics = "UA-154217073-1"
 
   [[menu.main]]
     name = "About"
-    url = "about"
+    url = "about/"
     weight = 20
