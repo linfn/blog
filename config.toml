@@ -10,23 +10,17 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 hasCJKLanguage = true
 enableEmoji = true
 
-# syntax highlighting
-pygmentsCodefences  = true
-pygmentsUseClasses  = true
-
 googleAnalytics = "UA-154217073-1"
 
 [author]
   name = "linfn"
 
-# Hugo 0.60 开始使用 goldmark 作为默认 Markdown 引擎, 
-# 这里仍使用 Blackfriday 是因为需要 hrefTargetBlank 特性
+# Hugo 0.60 开始使用 goldmark 作为默认 Markdown 引擎.
 [markup]
-  defaultMarkdownHandler = "Blackfriday"
-  [markup.blackfriday]
-    hrefTargetBlank = true
-    # noreferrerLinks = true
-    # nofollowLinks = true
+  # defaultMarkdownHandler = "goldmark"
+  [markup.highlight]
+    # codeFences = true
+    # noClasses = true
 
 [taxonomies]
   tag = "tags"
@@ -38,7 +32,7 @@ googleAnalytics = "UA-154217073-1"
   dateformNumTime = "2006-01-02 15:04 -0700"
 
   # Metadata mostly used in document's head
-  # description = ""
+  description = "将所学, 所思, 简洁清晰地表述出来."
   # images = [""]
   themeColor = "#494f5c"
 
@@ -57,7 +51,7 @@ googleAnalytics = "UA-154217073-1"
   code_copy_button = true # Turn on/off the code-copy-button for code-fields
 
   # Add custom css
-  # customCSS = ["css/foo.css", "css/bar.css"]
+  customCSS = ["css/custom.css"]
 
   # Social Icons
   # Check https://github.com/Track3/hermit#social-icons for more info.
